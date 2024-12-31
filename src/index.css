@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+*{
+    margin: 0px;
+    font-family: "Bodoni Moda", serif;
+}
+
+
+.flip-box {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+  }
+  
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-box-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-box-back {
+    background-color: rgb(156, 183, 211);
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  .background-img{
+    background-image: url(https://i.pinimg.com/736x/96/80/6e/96806e6049a7465d689e279f914481be.jpg);
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .overlay-text {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  .position-relative:hover .overlay-text {
+    opacity: 1;
+  }
+
+  .image-container {
+    background-image: url("https://i.pinimg.com/236x/c8/6f/dd/c86fdd0606c6362890dfc0270e0a9cce.jpg"); /* The image used - important! */
+    background-size: cover;
+    position: relative; /* Needed to position the cutout text in the middle of the image */
+    height: 150px; /* Some height */
+  }
+  .image-container1 {
+    background-image: url("https://i.pinimg.com/236x/a0/21/42/a021424f9a5e587cbd349f7f1653850a.jpg"); /* The image used - important! */
+    background-size: cover;
+    position: relative; /* Needed to position the cutout text in the middle of the image */
+    height: 150px; /* Some height */
+  }
+  
+  .image-container2 {
+    background-image: url("https://i.pinimg.com/736x/7b/ac/0b/7bac0bede11220d8f67c2684386dbd66.jpg"); /* The image used - important! */
+    background-size: cover;
+    position: relative; /* Needed to position the cutout text in the middle of the image */
+    height: 150px; /* Some height */
+  }
+  
+  .text {
+    background-color: white;
+    color: black;
+    font-size: 50px; /* Responsive font size */
+    font-weight: bold;
+    margin: 0 auto; /* Center the text container */
+    padding: 10px;
+    /* width: 50%; */
+    text-align: center; /* Center text */
+    position: absolute; /* Position text */
+    top: 50%; /* Position text in the middle */
+    left: 50%; /* Position text in the middle */
+    transform: translate(-50%, -50%); /* Position text in the middle */
+    mix-blend-mode: screen; /* This makes the cutout text possible */
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  .job-list {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  
+  .job-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .job-info h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .job-info p {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .details-btn {
+    background-color: #f5a623;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .details-btn:hover {
+    background-color: #e5941f;
+  }
